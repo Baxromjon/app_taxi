@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<div id="joy"></div>
+
+<script>
+    let cars = [
+        {id: 1, name: 'Malibu', modelId:50, modelName: 'Chevrolet'},
+        {id: 2, name: 'Captiva',  modelId:50, modelName: 'Chevrolet'},
+        {id: 3, name: 'Epicaa',  modelId:50, modelName: 'Chevrolet'},
+    ];
+
+    function chiz() {
+        let obj = `<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>ModelName</th>
+</tr>`;
+
+        for (let i = 0; i < cars.length; i++) {
+          let oneRow=`
+<tr>
+<th>${cars[i].id}</th>
+<th>${cars[i].name}</th>
+<th>${cars[i].modelName}</th>
+</tr>`;
+         obj+=oneRow;
+        }
+        obj+="</table>";
+
+        document.getElementById('joy').innerHTML = obj;
+    }
+
+    chiz();
+</script>
+</body>
+</html>
